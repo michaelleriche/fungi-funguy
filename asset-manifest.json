@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/fungi-funguy/static/css/main.d1b05096.chunk.css",
+    "main.js": "/fungi-funguy/static/js/main.35b27978.chunk.js",
+    "main.js.map": "/fungi-funguy/static/js/main.35b27978.chunk.js.map",
+    "runtime-main.js": "/fungi-funguy/static/js/runtime-main.9f84c84f.js",
+    "runtime-main.js.map": "/fungi-funguy/static/js/runtime-main.9f84c84f.js.map",
+    "static/js/2.7aedeaad.chunk.js": "/fungi-funguy/static/js/2.7aedeaad.chunk.js",
+    "static/js/2.7aedeaad.chunk.js.map": "/fungi-funguy/static/js/2.7aedeaad.chunk.js.map",
+    "index.html": "/fungi-funguy/index.html",
+    "precache-manifest.e0d92c15ce65a69a1b27e568e3482d57.js": "/fungi-funguy/precache-manifest.e0d92c15ce65a69a1b27e568e3482d57.js",
+    "service-worker.js": "/fungi-funguy/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/fungi-funguy/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.7aedeaad.chunk.js.LICENSE.txt": "/fungi-funguy/static/js/2.7aedeaad.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9f84c84f.js",
+    "static/js/2.7aedeaad.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.35b27978.chunk.js"
+  ]
+}
