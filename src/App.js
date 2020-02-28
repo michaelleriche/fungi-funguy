@@ -1,42 +1,49 @@
 import React, { Component } from 'react';
 import firebase from './firebase';
+import Header from './Header';
+import Card from './Card';
 import './App.css';
 
 class App extends Component{
   constructor() {
     super ();
     this.state = {
-      mushroomSpecies: [],
+      mushroomSpecies: []
     }
   }
 
-  // componentDidMount () {
-  //   const dbRef = firebase.database().ref();
-  //   dbRef.on('value', (response) => {
-  //     const mushroomGallery = [];
-  //     const data = response.val();
-  //     for (let key in data) {
-  //       mushroomGallery.push(data[key]);
-  //     }
-  //     this.setState({
-  //       mushroomSpecies: mushroomGallery
-  //     });
-  //   });
-  // }
+  componentDidMount () {
+    const dbRef = firebase.database().ref();
+    dbRef.on('value', (response) => {
+      const mushroomObj = response.val();
+      const arr = Object.values(mushroomObj);
+
+      let mushroomSpecies = [...this.state.mushroomSpecies]
+
+      arr.map((mush, i) => {
+         return mushroomSpecies.push({ image: mush.img, key: i, toxic: mush.toxic  });
+      })
+      this.setState({ mushroomSpecies: mushroomSpecies})
+    });
+  }
+
+  
     
 
 
   render(){
+    // const images = this.state.mushroomSpecies.map((img, i) => {
+    //   return (  
+    //   <div>
+    //     <img key={i} src={img.image} alt=""/>
+    //   </div>
+    //   )
+    // })
+    
       return (
         <div>
-          <header>
-            <h1>Is this fungi a fun guy?</h1>
-          </header>
-          <ul>
-            {this.state.mushroomSpecies.map((mushroom) => {
-              return <li>{mushroom}</li>
-            })}
-          </ul>
+         <Header />
+         <Card images={this.state.mushroomSpecies} />
         </div>
       );
   }
