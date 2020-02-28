@@ -4,7 +4,7 @@ class Card extends Component {
     constructor() {
         super()
         this.state = {
-            
+
         }
     }
 
@@ -21,11 +21,16 @@ class Card extends Component {
                 }
             }
             return (
-            <div key={i}>
-                <img src={mushroom.image} alt=""/>
-                <button value='true' onClick={handleClick}>Toxic</button>
-                <button value='false' onClick={handleClick}>Nontoxic</button>
-            </div>
+            <section className="cardHolder wrapper">
+                <div className="mushroomCard wrapper" key={i}>
+                    <h3>Mystery Mushroom #</h3>
+                    <img src={mushroom.image} alt=""/>
+                    <div className="cardButtons">
+                        <button value='true' onClick={handleClick}>Toxic</button>
+                        <button value='false' onClick={handleClick}>Edible</button>
+                    </div>  
+                </div>
+            </section>    
             )
         })
         return realCard;
