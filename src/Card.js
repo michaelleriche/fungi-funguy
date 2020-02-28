@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
 
 class Card extends Component {
-
-    handleClick() {
-        // e.preventDefualt()
-        console.log('I CLICK')
-        // pass an event to your onclick
-        
+    constructor() {
+        super()
+        this.state = {
+            
+        }
     }
+
+
     render(){
         const realCard = this.props.images.map((mushroom, i) => {
+           const handleClick = (e) => {
+                e.preventDefault()
+                const isToxic = mushroom.toxic.toString()
+                if(isToxic === e.target.value) {
+                    console.log('You got it right')
+                } else {
+                    console.log('you dumb~')
+                }
+            }
             return (
             <div key={i}>
                 <img src={mushroom.image} alt=""/>
-                <fieldset>
-                    <label htmlFor="toxic">Toxic</label>
-                    <input type="radio" id="toxic" name="toxic" value="true"></input>
-                    <label htmlFor="nontoxic">Non-Toxic</label>
-                    <input type="radio" id="nontoxic" name="nontoxic" value="false"></input>
-                    <button onClick={this.handleClick()}>CLICK ME</button>
-                </fieldset>
+                <button value='true' onClick={handleClick}>Toxic</button>
+                <button value='false' onClick={handleClick}>Nontoxic</button>
             </div>
             )
         })
