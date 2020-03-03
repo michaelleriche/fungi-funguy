@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fb1efe2b247227505512ab8f328a5278",
+    "revision": "c3fcc859c08766990b85e8dedb5a4cfc",
     "url": "/fungi-funguy/index.html"
   },
   {
-    "revision": "32a1aa5ddcdba29cc7a6",
-    "url": "/fungi-funguy/static/css/main.9fb82fe5.chunk.css"
+    "revision": "819afabda37b2c8bf5c8",
+    "url": "/fungi-funguy/static/css/main.c86e26c9.chunk.css"
   },
   {
     "revision": "deb60ee719a2534d7500",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fungi-funguy/static/js/2.4aee2c78.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "32a1aa5ddcdba29cc7a6",
-    "url": "/fungi-funguy/static/js/main.4b866b4f.chunk.js"
+    "revision": "819afabda37b2c8bf5c8",
+    "url": "/fungi-funguy/static/js/main.bf48b2f8.chunk.js"
   },
   {
     "revision": "2e076991c61409881722",
