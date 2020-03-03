@@ -28,7 +28,7 @@ class Hiscore extends Component {
 
       render(){ 
         return (
-          <section className="wrapper hiScore boxShadow">
+          <section className="wrapper hiScore boxShadow" tabIndex="0">
             <div className="playerStack hiScoreTitle">
               <h3 className="hiScoreTitleTwo">Hi-Scores</h3>
               <h3 className="hiScoreTitleThree">Hi-Scores</h3> 
