@@ -227,7 +227,6 @@ flex-direction: column;
 .hiScoreNames {
   margin-top: 40px;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   padding-bottom: 50px;
   text-align: center;

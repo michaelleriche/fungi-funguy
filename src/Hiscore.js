@@ -36,7 +36,7 @@ class Hiscore extends Component {
             </div>
             <div className="hiScoreNames">
               {this.state.userNameAndScore.map(name => {
-                return <p key={name.userName} classname="hiScoreNameSpan"><span className="hiScoreTitleTwo hiScoreNameSpan">Name:</span>{name.userName} <span className="hiScoreTitleThree hiScoreNameSpan">Score:</span>{name.score}/20</p>; })}
+                return <p key={name.userName} className="hiScoreNameSpan"><span className="hiScoreTitleTwo hiScoreNameSpan">Name:</span>{name.userName} <span className="hiScoreTitleThree hiScoreNameSpan">Score:</span>{name.score}/20</p>; })}
             </div>
           </section>
         );

@@ -23,7 +23,6 @@ class Card extends Component {
         })
     }
     handleClickReset = function(e) {
-        console.log('reset the quiz?')
         window.location.reload();
     }
     handleUserName = (e) => {
@@ -59,7 +58,6 @@ class Card extends Component {
 
     render(){
         const currentMushroom = this.props.images[this.state.mushroomIndex];
-        console.log(this.state.mushroomIndex)
         if(this.state.modalOpen && !this.state.isQuizDone) {
             return (
                 <section className="cardHolder wrapper">
@@ -74,7 +72,7 @@ class Card extends Component {
                     </div>
                     <form className="userName">
                         <label htmlFor="playerName">Name: </label>
-                        <input type="text" id="name" minlength="2" maxlength="18" onChange={this.handleUserName} required/>
+                        <input type="text" id="name" minLength="2" maxLength="18" onChange={this.handleUserName} required/>
                         <button className="startButton" onClick={this.handleClickUserName}>Start!</button>
                     </form>
                 </div>
