@@ -12,19 +12,19 @@ class Footer extends Component {
                     <ul>
                         <li>
                             <a className="linkedInLogo" href="https://www.linkedin.com/in/michael-le-riche-147b361a0/">
-                                <i className="fab fa-linkedin-in"></i>
+                                <i tabIndex="0" className="fab fa-linkedin-in"></i>
                                 <span className="visuallyHidden">Linkedin</span>
                             </a>
                         </li>  
                         <li>
                             <a className="twitterLogo" href="https://twitter.com/mlerichecodes">
-                                <i className="fab fa-twitter"></i>
+                                <i tabIndex="0" className="fab fa-twitter"></i>
                                 <span className="visuallyHidden">Twitter</span>
                             </a>
                         </li>
                         <li>
                             <a className ="gitHubLogo" href="https://github.com/michaelleriche">
-                                <i className="fab fa-github"></i>
+                                <i tabIndex="0"className="fab fa-github"></i>
                                 <span className="visuallyHidden">github</span>
                             </a>
                         </li>
