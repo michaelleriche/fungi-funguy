@@ -26,19 +26,19 @@ class Hiscore extends Component {
         });
       }
 
-    render(){ 
-      return (
-        <section className="wrapper hiScore">
-           <div className="playerStack hiScoreTitle">
-                        <h3 className="hiScoreTitleTwo">Hi-Scores</h3>
-                        <h3 className="hiScoreTitleThree">Hi-Scores</h3> 
-                        <h3>Hi-Scores</h3>
-                    </div>
+      render(){ 
+        return (
+          <section className="wrapper hiScore boxShadow">
+            <div className="playerStack hiScoreTitle">
+              <h3 className="hiScoreTitleTwo">Hi-Scores</h3>
+              <h3 className="hiScoreTitleThree">Hi-Scores</h3> 
+              <h3>Hi-Scores</h3>
+            </div>
             <div className="hiScoreNames">
               {this.state.userNameAndScore.map(name => {
-                return <p key={name.userName}><span className="hiScoreTitleTwo">Name:</span>{name.userName} <span className="hiScoreTitleThree">Score:</span>{name.score}/20</p>; })}
+                return <p key={name.userName} classname="hiScoreNameSpan"><span className="hiScoreTitleTwo hiScoreNameSpan">Name:</span>{name.userName} <span className="hiScoreTitleThree hiScoreNameSpan">Score:</span>{name.score}/20</p>; })}
             </div>
-        </section>
+          </section>
         );
     }
 }

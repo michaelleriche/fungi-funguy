@@ -8,6 +8,7 @@ class Card extends Component {
         super()
         this.state = {
             mushroomIndex: 0,
+            counterIndex: 1,
             correctAnswer: 0,
             wrongAnswer: 0,
             isQuizDone: false,
@@ -35,8 +36,10 @@ class Card extends Component {
         const isToxic = this.props.images[this.state.mushroomIndex].toxic.toString()
         this.setState({
             mushroomIndex: this.state.mushroomIndex + 1,
+            counterIndex: this.state.counterIndex +1,
+
         })
-        if (this.state.mushroomIndex == 19) {
+        if (this.state.counterIndex === 20) {
             const dbRef = firebase.database().ref('userName');
             dbRef.push().set({userName: `${this.state.userName}`, score: `${this.state.correctAnswer}`}) 
             this.setState({
@@ -60,9 +63,9 @@ class Card extends Component {
         if(this.state.modalOpen && !this.state.isQuizDone) {
             return (
                 <section className="cardHolder wrapper">
-                <div className="playerCard mushroomCard wrapper">
+                <div className="playerCard mushroomCard boxShadow wrapper">
                     <div className="playerPlaceholderImage">
-                        <img src={playerLogo} alt="mushroom logo from the noun project.com created by AomAm"/>
+                        <img src={playerLogo} alt="mushroom logo from the noun project.com created by AomAm" title="mushroom logo from the noun project.com created by AomAm"/>
                     </div>
                     <div className="playerStack">
                         <h3 className="hiScoreTitleTwo">Player</h3>
@@ -72,7 +75,7 @@ class Card extends Component {
                     <form className="userName">
                         <label htmlFor="playerName">Name: </label>
                         <input type="text" id="name" minlength="2" maxlength="18" onChange={this.handleUserName} required/>
-                        <button onClick={this.handleClickUserName}>Start!</button>
+                        <button className="startButton" onClick={this.handleClickUserName}>Start!</button>
                     </form>
                 </div>
             </section>    
@@ -84,11 +87,11 @@ class Card extends Component {
         } 
         return (
             <section className="cardHolder wrapper">
-                <div className="mushroomCard wrapper">
-                    <h2>{currentMushroom.binomial}</h2>
+                <div className="mushroomCard wrapper boxShadow">
+                    <h2 className="mushroomNames">{currentMushroom.binomial}</h2>
                     <img src={currentMushroom.image} alt=""/>
                     <div className="cardButtons">
-                        <button value='true' onClick={this.handleClick}>Toxic</button>
+                        <button value='true' className="firstButton" onClick={this.handleClick}>Toxic</button>
                         <button value='false' onClick={this.handleClick}>Edible</button>
                     </div>  
                 </div>

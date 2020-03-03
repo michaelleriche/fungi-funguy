@@ -1,3 +1,13 @@
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration,input[type=search]::-webkit-search-results-button,input[type=search]::-webkit-search-results-decoration{-webkit-appearance:none;-moz-appearance:none}input[type=search]{-webkit-appearance:none;-moz-appearance:none;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}textarea{overflow:auto;vertical-align:top;resize:vertical}audio,canvas,video{display:inline-block;max-width:100%}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}a:focus{outline:thin dotted}a:active,a:hover{outline:0}img{border:0;-ms-interpolation-mode:bicubic}figure{margin:0}form{margin:0}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline}button,input{line-height:normal}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}button,html,input,select,textarea{color:#222}::-moz-selection{background:#b3d4fc;text-shadow:none}::selection{background:#b3d4fc;text-shadow:none}img{vertical-align:middle}fieldset{border:0;margin:0;padding:0}textarea{resize:vertical}.chromeframe{margin:.2em 0;background:#ccc;color:#000;padding:.2em 0}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
+
+
+
 .wrapper {
   margin: 0 auto;
   max-width: 1200px;
@@ -19,16 +29,11 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
-.title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
 h1 {
+  font-family: 'Chicle';
   font-size: 8vw;
+  text-shadow: 2px 5px 0px #000000;
   color: #3e8914;
   margin: 0;
 }
@@ -40,20 +45,16 @@ h3 {
   letter-spacing: 0.1rem;
 }
 h4 {
-  font-size: 1.1rem;
-  line-height: 1.8rem;
+  font-size: 1.9vw;
+  line-height: 2.8vw;
   width: 75%;
   margin: 10px 0 40px 0;
 }
 label {
-  font-size: 1.5rem;
-}
-h1 {
-  font-family: 'Chicle';
+  font-size: 20px;
 }
 input {
-  font-size: 1.3rem;
- 
+  font-size: 20px;
 }
 button {
   font-family: 'Press Start 2P';
@@ -61,38 +62,108 @@ button {
   letter-spacing: 0.2rem;
   margin: 30px 0 40px 0;
   padding: 12px 35px;
-  border: 1px solid black;
+  border: 2px solid black;
   background-color: #3e8914;
   color:white;
   border-radius: 10px;
   transition: 0.2s;
 }
 button:hover {
-  box-shadow: 3px 5px black;
+  box-shadow: 8px 8px black;
+
 }
 button:active {
   box-shadow: 0;
 }
 p {
-  font-size: 2rem;
+  font-size: 1.3vw;
+  line-height: 2vw;
 }
 img {
   margin-left: 15px;
   width: 10vw;
   height: 10vw;
 }
-
+footer {
+  background-color: black;
+  color: white;
+  margin: 50px 0 0 0;
+  padding: 40px 0 20px 0;
+}
+footer h3 {
+ padding-bottom: 20px;
+}
+footer p {
+  margin: 0 auto;
+  width: 90%;
+  text-align: left;
+}
+li {
+  list-style-type: none;
+}
+i {
+  font-size: 2vw;
+  transition: 0.5s;
+}
+i:hover {
+  scale: 1.5;
+  transform: rotate(20deg);
+}
+ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+  padding: 0;
+}
+.headerP {
+  width: 70%;
+  margin: 70px 0;
+  padding: 40px 40px;
+  background-color: #000000;
+  color: white;
+  border-radius: 25px;
+  box-shadow: -15px -15px 0px 0px #e3b23c, -30px -30px 0px 0px #3e8914, 15px 15px 0px 0px #e3b23c, 30px 30px 0px 0px #3e8914, inset -1px -1px 4px -1px rgba(0,0,0,0.66);
+}
+.mushroomNames {
+  height: 20px;
+}
+.headerP p {
+  font-size: 5vw;
+  line-height: 4vw;
+}
+.firstButton {
+  margin-right: 10px;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 .cardHolder {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .finalScoreBanner {
+  padding: 8vw 0;
   text-align: center;
+  background-color: black;
+  border-radius: 25px;
+  box-shadow: 25px 25px 0px 0px #e3b23c, 50px 50px 0px 0px #3e8914;
+}
+.finalScoreBanner p {
+  color: white;
+}
+.finalScoreBanner button {
+  border: 1px solid white;
+  border-radius: 0;
+}
+.finalScoreBanner button:hover {
+  box-shadow: 8px 8px 0px 0px #e3b23c, 16px 16px 0px 0px #3e8914, 24px 24px 0px 0px blue, 32px 32px 0px 0px purple, 40px 40px 0px 0px red;
 }
 .mushroomCard {
-  width: 40%;
-  height: 450px;
+  width: 500px;
+  height: 550px;
   border: 2px solid black;
   border-radius: 5%;
   display: flex;
@@ -100,7 +171,6 @@ img {
   justify-content: space-around;
   align-items: center;
   margin: 10px auto;
-  box-shadow: 6px 6px 4px -6px rgba(0,0,0,0.66), inset -1px -1px 4px -1px rgba(0, 0, 0, 0.5);
 }
 .playerCard {
   display: flex;
@@ -115,7 +185,6 @@ flex-direction: column;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  
 }
 .playerStack {
   display: flex;
@@ -123,6 +192,7 @@ flex-direction: column;
 }
 .playerStack h3 {
   margin: 0;
+  line-height: 0.8vw;
 }
 .mushroomCard img {
   width: 250px;
@@ -141,13 +211,15 @@ flex-direction: column;
   box-shadow: none;
 }
 .hiScore {
-  margin-top: 100px;
+  margin: 100px auto;
   border-radius: 20px;
   border: 2px solid black;
-  box-shadow: 4px 4px 2px -3px rgba(0,0,0,0.66), inset -1px -1px 4px -1px rgba(0, 0, 0, 0.5);
   width: 60%; 
   display: flex;
   flex-direction: column;
+}
+.boxShadow {
+  box-shadow: 25px 25px 0px 0px #e3b23c, 50px 50px 0px 0px #3e8914, inset -1px -1px 4px -1px rgba(0,0,0,0.66);
 }
 .hiScoreTitle {
   margin-top: 50px;
@@ -160,89 +232,147 @@ flex-direction: column;
   padding-bottom: 50px;
   text-align: center;
 }
-.hiScoreNames p {
-  font-size: 1.1rem;
-  letter-spacing: 0.001rem;
-  line-height: 0.7rem;
-}
 .hiScoreTitleTwo {
   color: #e3b23c;
 }
 .hiScoreTitleThree {
   color: #3e8914;
 }
-footer {
-  background-color: black;
-  color: white;
-  margin: 50px 0 0 0;
-  padding: 40px 0 20px 0;
+.linkedInLogo {
+  color: #0072b1;
 }
-footer h3 {
- padding-bottom: 20px;
+.gitHubLogo {
+  color:#ff6347;
 }
-footer p {
-  font-size: 1rem;
-  line-height: 1.4rem;
-  margin: 0;
-  text-align: left;
+.twitterLogo {
+  color: #1da1f2;
 }
-
 .copyrightText {
   margin-top: 40px;
   padding-top: 20px;
   border-top: 1px solid #e3b23c;
 }
-
+.lastTextDiv {
+  margin: 100px 0 0 0;
+}
 .lastText {
-  margin-top: 50px;
   text-align: center;
 }
-
-@media(max-width: 1200px) {
-  .hiScoreNames p {
-    font-size: 1rem;
-  }
-  .mushroomCard {
-    width: 60%;
-  }
+.visuallyHidden {
+  visibility: hidden;
 }
 @media(max-width: 910px) {
+  h1 {
+    font-size: 9vw;
+  }
   .hiScore {
     width: 80%;
   }
+  i {
+    font-size: 5vw;
+  }
+  p {
+    font-size: 1.9vw;
+  }
 }
-@media(max-width: 734px) {
+@media(max-width: 768px) {
   h1 {
     font-size: 11vw;
+  }
+  p {
+    font-size: 2vw;
+    line-height: 3vw;
+  }
+  i {
+    font-size: 7vw;
+  }
+  img {
+    margin-left: 15px;
+    width: 20vw;
+    height: 20vw;
   }
   .title {
     margin-top: 20px;
     flex-direction: column;
     align-items: center;
   }
-  h4 {
-    font-size: 0.9rem;
-  }
-  label {
-    font-size: 1.2rem;
-  }
   .hiScore {
     width: 97%;
   }
   .mushroomCard {
-    width: 80%;
+    width: 80vw;
   }
-  .hiScore {
-    width: 70%;
+  .headerP p {
+    font-size: 8vw;
   }
-  .hiScoreNames p {
-    font-size: 0.7rem;
-  }
-  footer p {
-    font-size: 0.8rem;
-    line-height: 1.2rem;
-    text-align: center;
+  p {
+    font-size: 3vw;
+    line-height: 4.2vw;
   }
 }
-@media(max-width: 450px) {}
-@media(max-width: 320px) {}
+@media(max-width: 450px) {
+  .wrapper {
+    width: 99%;
+  }
+  h1 {
+    font-size: 19vw;
+  }
+  .hiScoreTitle {
+    margin-bottom: 30px;
+  }
+  .mushroomCard {
+    width: 95vw;
+  }
+  h4 {
+   font-size: 2vw;
+  }
+  img {
+    width: 20vw;
+    height: 20vw;
+  }
+  p {
+    font-size: 4vw;
+    line-height: 4.5vw;
+  }
+  .hiScoreNames {
+    margin-top: 10px;
+    line-height: 5rem;
+    flex-direction: column;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  .hiScoreNames p {
+    line-height: 6vw;
+    margin: 0;
+  }
+  .hiScoreNameSpan {
+    display: inline-block;
+    width: 100%;
+  }
+  .cardButtons {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .firstButton {
+    margin: 0 0 5px 0;
+  }
+  .startButton {
+    margin: 10px 0;
+  }
+  button {
+    margin: 0;
+  }
+}
+@media(max-width: 320px) {
+  h1 {
+    font-size: 22vw;
+  }
+  .copyrightText,
+  .lastText {
+    width: 100%;
+    text-align: center;
+  }
+  .lastText {
+    font-size: 2.5vw;
+  }
+}
