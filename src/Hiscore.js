@@ -29,10 +29,11 @@ class Hiscore extends Component {
     render(){ 
       return (
         <section className="wrapper hiScore">
-            <div className="hiScoreTitle">
-              <h3>Hi-Scores <span className="hiScoreTitleThree">Hi-Scores</span> Hi-Scores <span className="hiScoreTitleThree">Hi-Scores</span> Hi-Scores <span className="hiScoreTitleThree">Hi-Scores</span> Hi-Scores <span className="hiScoreTitleThree">Hi-Scores</span>  
-              </h3> 
-            </div>
+           <div className="playerStack hiScoreTitle">
+                        <h3 className="hiScoreTitleTwo">Hi-Scores</h3>
+                        <h3 className="hiScoreTitleThree">Hi-Scores</h3> 
+                        <h3>Hi-Scores</h3>
+                    </div>
             <div className="hiScoreNames">
               {this.state.userNameAndScore.map(name => {
                 return <p key={name.userName}><span className="hiScoreTitleTwo">Name:</span>{name.userName} <span className="hiScoreTitleThree">Score:</span>{name.score}/20</p>; })}

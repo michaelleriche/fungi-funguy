@@ -16,7 +16,6 @@ class Card extends Component {
         }
         this.handleClickReset = this.handleClickReset.bind(this);
     }
-
     handleClickUserName = (e) => {
         this.setState({
             modalOpen: false,
@@ -26,13 +25,11 @@ class Card extends Component {
         console.log('reset the quiz?')
         window.location.reload();
     }
-
     handleUserName = (e) => {
         this.setState({
             userName: e.target.value
         })
     }
-    
     handleClick = (e) => {
         e.preventDefault()
         const isToxic = this.props.images[this.state.mushroomIndex].toxic.toString()
@@ -46,7 +43,6 @@ class Card extends Component {
                 isQuizDone: true,
             })
         }
-
         if(isToxic === e.target.value) {
             this.setState({
                 correctAnswer: this.state.correctAnswer + 1,
@@ -73,13 +69,11 @@ class Card extends Component {
                         <h3 className="hiScoreTitleThree">Player</h3> 
                         <h3>Player</h3>
                     </div>
-                        <div className="playerInput">
-                            <div className="userName">
-                                <label htmlFor="playerName">Name: </label>
-                                <input type="text" id="name" onChange={this.handleUserName}/>
-                            </div>
-                            <button onClick={this.handleClickUserName}>Start!</button>
-                        </div>  
+                    <form className="userName">
+                        <label htmlFor="playerName">Name: </label>
+                        <input type="text" id="name" minlength="2" maxlength="18" onChange={this.handleUserName} required/>
+                        <button onClick={this.handleClickUserName}>Start!</button>
+                    </form>
                 </div>
             </section>    
             )
@@ -89,16 +83,16 @@ class Card extends Component {
             return <FinalScore userName={this.state.userName} finalScoreTally={this.state.correctAnswer} resetQuiz={this.handleClickReset}/>
         } 
         return (
-                <section className="cardHolder wrapper">
-                        <div className="mushroomCard wrapper">
-                        <h2>{currentMushroom.binomial}</h2>
-                            <img src={currentMushroom.image} alt=""/>
-                            <div className="cardButtons">
-                                <button value='true' onClick={this.handleClick}>Toxic</button>
-                                <button value='false' onClick={this.handleClick}>Edible</button>
-                            </div>  
-                        </div>
-                    </section>  
+            <section className="cardHolder wrapper">
+                <div className="mushroomCard wrapper">
+                    <h2>{currentMushroom.binomial}</h2>
+                    <img src={currentMushroom.image} alt=""/>
+                    <div className="cardButtons">
+                        <button value='true' onClick={this.handleClick}>Toxic</button>
+                        <button value='false' onClick={this.handleClick}>Edible</button>
+                    </div>  
+                </div>
+            </section>  
         ) 
     }
 }

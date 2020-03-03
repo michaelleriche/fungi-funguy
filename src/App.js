@@ -3,6 +3,7 @@ import firebase from './firebase';
 import Header from './Header';
 import Card from './Card';
 import Hiscore from './Hiscore';
+import Footer from './Footer';
 import './App.css';
 
 class App extends Component {
@@ -26,16 +27,13 @@ class App extends Component {
     });
   }
 
-  
-    
-
-
   render(){
       return (
         <div>
           <Header />
           <Card images={this.state.mushroomSpecies} />
           <Hiscore />
+          <Footer />
         </div>
       );
   }
