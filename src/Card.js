@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from './firebase';
+import playerLogo from './assets/playerPlaceholderImg.jpg';
 import FinalScore from '../src/FinalScore';
 
 class Card extends Component {
@@ -13,13 +14,17 @@ class Card extends Component {
             userName: null,
             modalOpen: true
         }
+        this.handleClickReset = this.handleClickReset.bind(this);
     }
 
     handleClickUserName = (e) => {
         this.setState({
             modalOpen: false,
         })
-        
+    }
+    handleClickReset = function(e) {
+        console.log('reset the quiz?')
+        window.location.reload();
     }
 
     handleUserName = (e) => {
@@ -27,8 +32,6 @@ class Card extends Component {
             userName: e.target.value
         })
     }
-
-
     
     handleClick = (e) => {
         e.preventDefault()
@@ -42,7 +45,6 @@ class Card extends Component {
             this.setState({
                 isQuizDone: true,
             })
-            console.log(this.state.isQuizDone)
         }
 
         if(isToxic === e.target.value) {
@@ -54,29 +56,29 @@ class Card extends Component {
                 wrongAnswer: this.state.wrongAnswer + 1,
             })
         }
-    
-        console.log('You got it right', this.state.correctAnswer)
-        console.log('you dumb~', this.state.wrongAnswer)
-
     }
-
-   
 
     render(){
         const currentMushroom = this.props.images[this.state.mushroomIndex];
-       
-
-  
+        console.log(this.state.mushroomIndex)
         if(this.state.modalOpen && !this.state.isQuizDone) {
             return (
                 <section className="cardHolder wrapper">
                 <div className="playerCard mushroomCard wrapper">
-                    <h3><span className="hiScoreTitleTwo">Player </span><span className="hiScoreTitleThree">Player</span> Player</h3>
-
-                        <div className="userName">
-                            <label htmlFor="playerName">Name: </label>
-                            <input type="text" id="name" onChange={this.handleUserName}/>
-                            <button  onClick={this.handleClickUserName}>Submit!</button>
+                    <div className="playerPlaceholderImage">
+                        <img src={playerLogo} alt="mushroom logo from the noun project.com created by AomAm"/>
+                    </div>
+                    <div className="playerStack">
+                        <h3 className="hiScoreTitleTwo">Player</h3>
+                        <h3 className="hiScoreTitleThree">Player</h3> 
+                        <h3>Player</h3>
+                    </div>
+                        <div className="playerInput">
+                            <div className="userName">
+                                <label htmlFor="playerName">Name: </label>
+                                <input type="text" id="name" onChange={this.handleUserName}/>
+                            </div>
+                            <button onClick={this.handleClickUserName}>Start!</button>
                         </div>  
                 </div>
             </section>    
@@ -84,46 +86,20 @@ class Card extends Component {
         }
 
         if (this.state.isQuizDone) {
-
-            return <FinalScore userName={this.state.userName} finalScoreTally={this.state.correctAnswer}/>
+            return <FinalScore userName={this.state.userName} finalScoreTally={this.state.correctAnswer} resetQuiz={this.handleClickReset}/>
         } 
-            return (
+        return (
                 <section className="cardHolder wrapper">
                         <div className="mushroomCard wrapper">
-                            <h3>Mystery Mushroom #</h3>
+                        <h2>{currentMushroom.binomial}</h2>
                             <img src={currentMushroom.image} alt=""/>
-                             <div className="cardButtons">
+                            <div className="cardButtons">
                                 <button value='true' onClick={this.handleClick}>Toxic</button>
                                 <button value='false' onClick={this.handleClick}>Edible</button>
                             </div>  
                         </div>
-                     </section>  
-
-            ) 
-        // const realCard = this.props.images.map((mushroom, i) => {
-        //    const handleClick = (e) => {
-        //         e.preventDefault()
-        //         const isToxic = mushroom.toxic.toString()
-        //         if(isToxic === e.target.value) {
-        //             console.log('You got it right')
-        //         } else {
-        //             console.log('you dumb~')
-        //         }
-        //     }
-        //     return (
-        //     <section className="cardHolder wrapper">
-        //         <div className="mushroomCard wrapper" key={i}>
-        //             <h3>Mystery Mushroom #</h3>
-        //             <img src={mushroom.image} alt=""/>
-        //             <div className="cardButtons">
-        //                 <button value='true' onClick={handleClick}>Toxic</button>
-        //                 <button value='false' onClick={handleClick}>Edible</button>
-        //             </div>  
-        //         </div>
-        //     </section>    
-        //     )
-        // })
-        // return realCard;
+                    </section>  
+        ) 
     }
 }
 
