@@ -12,6 +12,4 @@ const FinalScore = (props) => {
     )
 }
 
-
-
 export default FinalScore;

@@ -6,8 +6,6 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 .visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
-
-
 .wrapper {
   margin: 0 auto;
   max-width: 1200px;
@@ -50,9 +48,11 @@ h4 {
   width: 75%;
   margin: 10px 0 40px 0;
 }
-label {
-  font-size: 20px;
+p {
+  font-size: 1.3vw;
+  line-height: 2vw;
 }
+label,
 input {
   font-size: 20px;
 }
@@ -80,10 +80,6 @@ button:focus {
 }
 button:active {
   box-shadow: 0;
-}
-p {
-  font-size: 1.3vw;
-  line-height: 2vw;
 }
 img {
   margin-left: 15px;
@@ -131,7 +127,7 @@ ul {
   background-color: #000000;
   color: white;
   border-radius: 25px;
-  box-shadow: -15px -15px 0px 0px #e3b23c, -30px -30px 0px 0px #3e8914, 15px 15px 0px 0px #e3b23c, 30px 30px 0px 0px #3e8914, inset -1px -1px 4px -1px rgba(0,0,0,0.66);
+  box-shadow: -15px -15px #e3b23c, -30px -30px#3e8914, 15px 15px#e3b23c, 30px 30px#3e8914, inset -1px -1px 4px -1px rgba(0,0,0,0.66);
 }
 .mushroomNames {
   height: 20px;
@@ -158,7 +154,7 @@ ul {
   text-align: center;
   background-color: black;
   border-radius: 25px;
-  box-shadow: 25px 25px 0px 0px #e3b23c, 50px 50px 0px 0px #3e8914;
+  box-shadow: 25px 25px#e3b23c, 50px 50px#3e8914;
 }
 .finalScoreBanner p {
   color: white;
@@ -168,7 +164,7 @@ ul {
   border-radius: 0;
 }
 .finalScoreBanner button:hover {
-  box-shadow: 8px 8px 0px 0px #e3b23c, 16px 16px 0px 0px #3e8914, 24px 24px 0px 0px blue, 32px 32px 0px 0px purple, 40px 40px 0px 0px red;
+  box-shadow: 5px 5px #e3b23c, 10px 10px#3e8914, 15px 15px blue, 20px 20px purple, 25px 25px red;
 }
 .mushroomCard {
   width: 500px;
@@ -181,14 +177,13 @@ ul {
   align-items: center;
   margin: 10px auto;
 }
-.playerCard {
+.playerCard,
+.userName {
   display: flex;
   flex-direction: column;
+  }
+.playerCard {
   justify-content: space-evenly;
-}
-.userName {
-display: flex;
-flex-direction: column;
 }
 .cardButtons {
   display: flex;
@@ -231,7 +226,7 @@ flex-direction: column;
   flex-direction: column;
 }
 .boxShadow {
-  box-shadow: 25px 25px 0px 0px #e3b23c, 50px 50px 0px 0px #3e8914, inset -1px -1px 4px -1px rgba(0,0,0,0.66);
+  box-shadow: 25px 25px#e3b23c, 50px 50px #3e8914, inset -1px -1px 4px -1px rgba(0,0,0,0.66);
 }
 .hiScoreTitle {
   margin-top: 50px;
@@ -298,7 +293,7 @@ flex-direction: column;
     font-size: 7vw;
   }
   img {
-    margin-left: 15px;
+    margin:15px 0 0 15px;
     width: 20vw;
     height: 20vw;
   }

@@ -61,22 +61,22 @@ class Card extends Component {
         if(this.state.modalOpen && !this.state.isQuizDone) {
             return (
                 <section className="cardHolder wrapper">
-                <div className="playerCard mushroomCard boxShadow wrapper">
-                    <div className="playerPlaceholderImage">
-                        <img src={playerLogo} alt="mushroom logo from the noun project.com created by AomAm" title="mushroom logo from the noun project.com created by AomAm"/>
+                    <div className="playerCard mushroomCard boxShadow wrapper">
+                        <div className="playerPlaceholderImage">
+                            <img src={playerLogo} alt="mushroom logo from the noun project.com created by AomAm" title="mushroom logo from the noun project.com created by AomAm"/>
+                        </div>
+                        <div className="playerStack">
+                            <h3 className="hiScoreTitleTwo">Player</h3>
+                            <h3 className="hiScoreTitleThree">Player</h3> 
+                            <h3>Player</h3>
+                        </div>
+                        <form className="userName">
+                            <label htmlFor="playerName">Name: </label>
+                            <input type="text" id="name" minLength="2" maxLength="18" onChange={this.handleUserName} required/>
+                            <button className="startButton" onClick={this.handleClickUserName}>Start!</button>
+                        </form>
                     </div>
-                    <div className="playerStack">
-                        <h3 className="hiScoreTitleTwo">Player</h3>
-                        <h3 className="hiScoreTitleThree">Player</h3> 
-                        <h3>Player</h3>
-                    </div>
-                    <form className="userName">
-                        <label htmlFor="playerName">Name: </label>
-                        <input type="text" id="name" minLength="2" maxLength="18" onChange={this.handleUserName} required/>
-                        <button className="startButton" onClick={this.handleClickUserName}>Start!</button>
-                    </form>
-                </div>
-            </section>    
+                </section>    
             )
         }
 
@@ -87,7 +87,7 @@ class Card extends Component {
             <section className="cardHolder wrapper">
                 <div className="mushroomCard wrapper boxShadow">
                     <h2 className="mushroomNames">{currentMushroom.binomial}</h2>
-                    <img src={currentMushroom.image} alt=""/>
+                    <img src={currentMushroom.image} alt={currentMushroom.binomial} title={currentMushroom.binomial}/>
                     <div className="cardButtons">
                         <button value='true' className="firstButton" onClick={this.handleClick}>Toxic</button>
                         <button value='false' onClick={this.handleClick}>Edible</button>
