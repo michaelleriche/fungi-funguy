@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/fungi-funguy/precache-manifest.cfffdb773264e648ec2952c36b5726d5.js"
+  "/fungi-funguy/precache-manifest.56a9f58fe7608ed322cbb476fea00efc.js"
 );
 
 self.addEventListener('message', (event) => {
