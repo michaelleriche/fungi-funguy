@@ -185,6 +185,13 @@ ul {
 .playerCard {
   justify-content: space-evenly;
 }
+.bottomHalfCard {
+  display: flex;
+  flex-direction: column;
+}
+.gameScore {
+  width: 100%;
+}
 .cardButtons {
   display: flex;
   flex-direction: row;

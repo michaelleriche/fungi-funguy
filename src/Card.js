@@ -88,10 +88,15 @@ class Card extends Component {
                 <div className="mushroomCard wrapper boxShadow">
                     <h2 className="mushroomNames">{currentMushroom.binomial}</h2>
                     <img src={currentMushroom.image} alt={currentMushroom.binomial} title={currentMushroom.binomial}/>
-                    <div className="cardButtons">
-                        <button value='true' className="firstButton" onClick={this.handleClick}>Toxic</button>
-                        <button value='false' onClick={this.handleClick}>Edible</button>
-                    </div>  
+                    <div className="bottomHalfCard">
+                        <div className="gameScore">
+                            <p> Score: {this.state.correctAnswer} / 20</p>
+                        </div>
+                        <div className="cardButtons">
+                            <button value='true' className="firstButton" onClick={this.handleClick}>Toxic</button>
+                            <button value='false' onClick={this.handleClick}>Edible</button>
+                        </div>  
+                    </div>    
                 </div>
             </section>  
         ) 
