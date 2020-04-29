@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/fungi-funguy/static/css/main.2a8cb046.chunk.css",
-    "main.js": "/fungi-funguy/static/js/main.46dbcc57.chunk.js",
-    "main.js.map": "/fungi-funguy/static/js/main.46dbcc57.chunk.js.map",
+    "main.css": "/fungi-funguy/static/css/main.4fca7286.chunk.css",
+    "main.js": "/fungi-funguy/static/js/main.7032f346.chunk.js",
+    "main.js.map": "/fungi-funguy/static/js/main.7032f346.chunk.js.map",
     "runtime-main.js": "/fungi-funguy/static/js/runtime-main.9f84c84f.js",
     "runtime-main.js.map": "/fungi-funguy/static/js/runtime-main.9f84c84f.js.map",
     "static/js/2.4aee2c78.chunk.js": "/fungi-funguy/static/js/2.4aee2c78.chunk.js",
     "static/js/2.4aee2c78.chunk.js.map": "/fungi-funguy/static/js/2.4aee2c78.chunk.js.map",
     "index.html": "/fungi-funguy/index.html",
-    "precache-manifest.56a9f58fe7608ed322cbb476fea00efc.js": "/fungi-funguy/precache-manifest.56a9f58fe7608ed322cbb476fea00efc.js",
+    "precache-manifest.14edc558dd3f880fb74a697e4af40082.js": "/fungi-funguy/precache-manifest.14edc558dd3f880fb74a697e4af40082.js",
     "service-worker.js": "/fungi-funguy/service-worker.js",
-    "static/css/main.2a8cb046.chunk.css.map": "/fungi-funguy/static/css/main.2a8cb046.chunk.css.map",
+    "static/css/main.4fca7286.chunk.css.map": "/fungi-funguy/static/css/main.4fca7286.chunk.css.map",
     "static/js/2.4aee2c78.chunk.js.LICENSE.txt": "/fungi-funguy/static/js/2.4aee2c78.chunk.js.LICENSE.txt",
     "static/media/logo.jpg": "/fungi-funguy/static/media/logo.2ed5d571.jpg",
     "static/media/playerPlaceholderImg.jpg": "/fungi-funguy/static/media/playerPlaceholderImg.ac822c5a.jpg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.9f84c84f.js",
     "static/js/2.4aee2c78.chunk.js",
-    "static/css/main.2a8cb046.chunk.css",
-    "static/js/main.46dbcc57.chunk.js"
+    "static/css/main.4fca7286.chunk.css",
+    "static/js/main.7032f346.chunk.js"
   ]
 }
